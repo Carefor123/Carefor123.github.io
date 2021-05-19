@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <title>missx</title>
+  <style type="text/css">
+    @media screen and (min-width:370px) {
+      #wordCon {
+        width: 240px;
+        height: 130px;
+        position: absolute;
+        top: 60%;
+        left: 0;
+        right: 0;
+        /* bottom: 13%; */
+        margin: auto;
+        /* background: powderblue; */
+        text-align: center;
+        font-family: "Regular", cursive;
+        font-size: 24px;
+        padding: 15px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        /* font-size: 10.24px !important; */
+      }
+
+      body {
+        background: url(imgs/IMGIOS.png);
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      ul {
+        position: fixed;
+        top: 18%;
+        width: 150px;
+        height: 220px;
+        transform-style: preserve-3d;
+        animation: play-img 10s infinite linear;
+      }
+
+      ul li {
+        width: 150px;
+        height: 220px;
+        list-style: none;
+        position: absolute;
+      }
+
+      ul li img {
+        width: 150px;
+        height: 220px;
+        transition: all 1s;
+      }
+
+      ul li:first-child {
+        transform: rotateY(60deg) translateZ(150px);
+      }
+
+      ul li:nth-child(2) {
+        transform: rotateY(120deg) translateZ(150px);
+      }
+
+      ul li:nth-child(3) {
+        transform: rotateY(180deg) translateZ(150px);
+      }
+
+      ul li:nth-child(4) {
+        transform: rotateY(240deg) translateZ(150px);
+      }
+
+      ul li:nth-child(5) {
+        transform: rotateY(300deg) translateZ(150px);
+      }
+
+      ul li:nth-child(6) {
+        transform: rotateY(360deg) translateZ(150px);
+      }
+
+      #word {
+        position: fixed;
+        bottom: 120px;
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+      }
+
+      #author {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        font-size: 8px;
+        color: #fff;
+      }
+
+      @keyframes play-img {
+        from {
+          transform: rotateX(-20deg) rotateY(0deg);
+        }
+
+        to {
+          transform: rotateX(-20deg) rotateY(360deg);
+        }
+      }
+    }
+
+    @media screen and (min-width: 800px) {
+      #wordCon {
+        width: 550px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        margin: auto;
+        /* background: powderblue; */
+        text-align: center;
+        font-family: "Regular", cursive;
+        font-size: 35px;
+        padding: 15px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        background: url(imgs/IMG.png);
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      ul {
+        position: fixed;
+        top: 18%;
+        width: 200px;
+        height: 260px;
+        transform-style: preserve-3d;
+        animation: play-img 10s infinite linear;
+      }
+
+      ul li {
+        width: 200px;
+        height: 260px;
+        list-style: none;
+        position: absolute;
+      }
+
+      ul li img {
+        width: 200px;
+        height: 260px;
+        transition: all 1s;
+      }
+
+      ul li:first-child {
+        transform: rotateY(60deg) translateZ(200px);
+      }
+
+      ul li:nth-child(2) {
+        transform: rotateY(120deg) translateZ(200px);
+      }
+
+      ul li:nth-child(3) {
+        transform: rotateY(180deg) translateZ(200px);
+      }
+
+      ul li:nth-child(4) {
+        transform: rotateY(240deg) translateZ(200px);
+      }
+
+      ul li:nth-child(5) {
+        transform: rotateY(300deg) translateZ(200px);
+      }
+
+      ul li:nth-child(6) {
+        transform: rotateY(360deg) translateZ(200px);
+      }
+
+      @keyframes play-img {
+        from {
+          transform: rotateX(-20deg) rotateY(0deg);
+        }
+
+        to {
+          transform: rotateX(-20deg) rotateY(360deg);
+        }
+      }
+
+      ul:hover {
+        animation-play-state: paused;
+      }
+
+      ul:hover li img {
+        opacity: .6;
+      }
+
+      ul li:hover img {
+        cursor: pointer;
+        opacity: 1;
+        transform: scale(1.5);
+      }
+
+      #word {
+        position: fixed;
+        bottom: 130px;
+        font-size: 28px;
+        color: #fff;
+        text-align: center;
+      }
+
+      #author {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        color: #fff;
+      }
+
+      .audio {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .audio p {
+        font-size: 20px;
+        color: #fff;
+        width: 100px;
+        height: 54px;
+        line-height: 54px;
+      }
+
+      .audio audio {
+        height: 30px;
+        outline: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li><img src="imgs/img_1.jpg" /></li>
+    <li><img src="imgs/img_2.jpg" /></li>
+    <li><img src="imgs/img_3.jpg" /></li>
+    <li><img src="imgs/img_4.jpg" /></li>
+    <li><img src="imgs/img_5.jpg" /></li>
+    <li><img src="imgs/img_6.jpg" /></li>
+  </ul>
+  <!-- <div class="audio">
+		<p>点击播放：</p>
+		<audio id="bg-music" src="music/你的答案-阿冗.ogg" autoplay="autoplay" loop controls></audio>
+	</div> -->
+  <p id="word"></p>
+  <div id="wordCon"></div>
+
+  <p id="author">Y / 2021.5.20</p>
+  <script type="text/javascript">
+    let container = document.getElementById("wordCon");
+
+    let len = 0,
+      timer = 0,
+      // str = "茫茫人海，相遇不易。拥有时且须好好珍惜。MissX! Happy Every Day!";
+      str = "人生最大的过错，就是错过，好好珍惜当下所拥有的，不要让自己有所遗憾。MissX Happy Every Day!";
+    var colorArr = ['#f77399', '#fb9980', '#fcda54', '#ffffff']; //建立颜色库
+    function typing() {
+      if (len <= str.length) {
+        let con = str.slice(0, len++) + "_";
+        var div = document.getElementById('word'); //获得div元素
+        container.innerHTML = con;
+        container.style.color = "#ffffff";
+        timer = setTimeout(typing, 300);
+      } else {
+        container.innerHTML = str; //打印完成, 展示str完整内容
+        setInterval('changeColor()', 1000);
+        clearTimeout(timer);
+      }
+    }
+
+    typing();
+
+    var i = 0;
+    function changeColor() {
+      // var div = document.getElementById('word'); //获得div元素
+      var colorArr = ['#f77399', '#fb9980', '#fcda54', '#ffffff']; //建立颜色库
+      if (i == colorArr.length) {
+        i = 0;
+      } else {
+        container.style.color = colorArr[i++ % colorArr.length]; //循环颜色
+      }
+    }
+  </script>
+  <script src="./js/sakura.js"></script>
+  <!-- <script src="./js/rem.js"></script> -->
+</body>
+
+</html>
